@@ -4,7 +4,7 @@ import Navbar from './Navbar';
 import About from './About';
 import Tech from './Tech';
 import Experience from './Experience';
-import Education from './education';
+import Education from './Educate';
 import Works from './Works';
 import OpenSource from './OpenSource';
 import Feedbacks from './Feedbacks';
