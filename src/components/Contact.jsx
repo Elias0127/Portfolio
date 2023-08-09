@@ -31,11 +31,16 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    // Check if any field is empty
+    if (!form.name || !form.email || !form.message) {
+      alert("Please fill in all the fields before sending.");
+      return; // Exit out of the function
+    }
     setLoading(true);
 
-// iGAKmgYYTbu-C7Km_
-//  template_uyxhrdf
-// service_7i99vn9
+    // iGAKmgYYTbu-C7Km_
+    //  template_uyxhrdf
+    // service_7i99vn9
     emailjs
       .send(
         'service_7i99vn9',
@@ -75,7 +80,7 @@ const Contact = () => {
     >
       <motion.div
         variants={slideIn("left", "tween", 0.2, 1)}
-        className='flex-[0.75] bg-black-100 p-8 rounded-2xl'
+        className='flex-[0.75] bg-gradient-to-t from-[rgb(17, 24, 39)] to-[rgb(75, 85, 99)] border-2 border-[#606e82] shadow-lg p-8 rounded-2xl'
       >
         <p className={styles.sectionSubText}>Get in touch</p>
         <h3 className={styles.sectionHeadText}>Contact.</h3>
@@ -93,9 +98,10 @@ const Contact = () => {
               value={form.name}
               onChange={handleChange}
               placeholder="What's your good name?"
-              className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
+              className='bg-gradient-to-t from-[rgb(17, 24, 39)] to-[rgb(75, 85, 99)] shadow-lg py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none font-medium'
             />
           </label>
+
           <label className='flex flex-col'>
             <span className='text-white font-medium mb-4'>Your email</span>
             <input
@@ -104,9 +110,10 @@ const Contact = () => {
               value={form.email}
               onChange={handleChange}
               placeholder="What's your web address?"
-              className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
+              className='bg-gradient-to-t from-[rgb(17, 24, 39)] to-[rgb(75, 85, 99)] shadow-lg py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none font-medium'
             />
           </label>
+
           <label className='flex flex-col'>
             <span className='text-white font-medium mb-4'>Your Message</span>
             <textarea
@@ -115,16 +122,18 @@ const Contact = () => {
               value={form.message}
               onChange={handleChange}
               placeholder='What you want to say?'
-              className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
+              className='bg-gradient-to-t from-[rgb(17, 24, 39)] to-[rgb(75, 85, 99)] shadow-lg py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none font-medium'
             />
           </label>
 
           <button
             type='submit'
-            className='bg-tertiary py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary'
+            className='bg-gradient-to-r from-[rgb(17, 24, 39)] to-[rgb(75, 85, 99)] py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-lg hover:shadow-xl transition-shadow duration-300 hover:bg-gradient-to-r hover:from-[rgb(10, 15, 30)] hover:to-[rgb(45, 55, 72)]'
           >
             {loading ? "Sending..." : "Send"}
           </button>
+
+
         </form>
       </motion.div>
 

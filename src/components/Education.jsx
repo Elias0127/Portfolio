@@ -1,8 +1,9 @@
 import React, { useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
-import { useAnimation } from 'framer-motion';
-import { motion } from 'framer-motion';
+import { useAnimation, motion } from 'framer-motion';
 import { styles } from "../styles";
+import { Tilt } from "react-tilt";
+
 import { SectionWrapper } from "../hoc";
 import { education } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
@@ -14,26 +15,33 @@ const EducationCard = ({ index, university, degree, duration, description, logo 
     };
 
     return (
-        <motion.div
-            variants={cardVariants}
-            initial='hidden'
-            animate='visible'
-            className='bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full'>
-            <div className='flex items-center'>
-                <img src={logo} alt='university logo' className='w-16 h-16 object-contain mr-5' />
-                <div>
-                    <h3 className='text-white font-bold text-[24px]'>{university}</h3>
+        <Tilt
+            options={{
+                max: 45,
+                scale: 1,
+                speed: 450,
+            }}
+        >
+            <motion.div
+                variants={cardVariants}
+                initial='hidden'
+                animate='visible'
+                className='bg-gradient-to-t from-[rgb(17, 24, 39)] to-[rgb(75, 85, 99)] border-2 border-[#606e82] shadow-lg p-5 rounded-2xl sm:w-[360px] w-full min-h-[360px] max-h-[360px]'>
+                <div className='flex items-center'>
+                    <img src={logo} alt='university logo' className='w-16 h-16 object-contain mr-5' />
+                    <div>
+                        <h3 className='text-white font-bold text-[24px]'>{university}</h3>
+                    </div>
                 </div>
-            </div>
-            <div className='mt-5 flex items-center'>
-                <p className='text-secondary text-[18px] font-bold'>{degree}</p>
-            </div>
-            <p className='text-secondary text-[16px]'>{duration}</p>
-            <p className='mt-5 text-secondary text-[14px]'>{description}</p>
-        </motion.div>
+                <div className='mt-5 flex items-center'>
+                    <p className='text-secondary text-[18px] font-bold'>{degree}</p>
+                </div>
+                <p className='text-secondary text-[16px]'>{duration}</p>
+                <p className='mt-5 text-secondary text-[14px]'>{description}</p>
+            </motion.div>
+        </Tilt>
     );
 };
-
 
 const Education = () => {
     const ref = useRef();

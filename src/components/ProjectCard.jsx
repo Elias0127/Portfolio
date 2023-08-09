@@ -25,7 +25,7 @@ const ProjectCard = ({
                     scale: 1,
                     speed: 450,
                 }}
-                className='bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full'
+                className='bg-gradient-to-t from-[rgb(17, 24, 39)] to-[rgb(75, 85, 99)] border-2 border-[#606e82] shadow-lg p-5 rounded-2xl sm:w-[360px] w-full'
             >
                 <div className='flex space-x-4'>
                     {images.map((image, index) => (
@@ -54,7 +54,7 @@ const ProjectCard = ({
                             />
                         </div>
                     </div>
-                </div>
+            </div>
 
                 <div className='mt-5'>
                     <h3 className='text-white font-bold text-[24px]'>{name}</h3>
