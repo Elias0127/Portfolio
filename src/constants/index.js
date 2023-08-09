@@ -264,8 +264,12 @@ const openSource = [
                 color: "blue-text-gradient",
             },
             {
-                name: "Machine Learning",
+                name: "JavaScript",
                 color: "green-text-gradient",
+            },
+            {
+                name: "PostgreSQL",
+                color: "pink-text-gradient",
             },
         ],
         images: [openLibrary],
@@ -277,12 +281,16 @@ const openSource = [
             "An open-source web application that provides a platform for users to monitor, analyze, and visualize energy consumption data. It's built with the principle of portability, enabling its deployment in a variety of organizations. OED seeks to simplify the management of energy usage and promote sustainability.",
         tags: [
             {
-                name: "Python",
+                name: "TypeScript",
                 color: "blue-text-gradient",
             },
             {
-                name: "Machine Learning",
+                name: "React",
                 color: "green-text-gradient",
+            },
+            {
+                name: "PostgreSQL",
+                color: "pink-text-gradient",
             },
         ],
         images: [oed],
@@ -294,16 +302,21 @@ const education = [
         university: "California State University Long Beach",
         degree: "Bachelor's in Computer Science",
         duration: "2022 - 2025",
-        description: "Currently pursuing a Bachelor's in Computer Science. Courses of interest include Algorithm Design, Data Structures, and Web Development. Recipient of the CSULB Excellence Award for the 2022-23 academic year.",
+        description: "Currently pursuing a Bachelor's in Computer Science.",
+        courses: ["Algorithms", "Comp Archt","Database","Operating Systems","Software Engineer", "Cyber Security"],
+        gpa: "3.5",
         logo: csulb,
     },
     {
         university: "Santa Monica College",
         degree: "Associate's in Computer Science",
         duration: "2020 - 2022",
-        description: "Graduated with an Associate's Degree in Computer Science. Excelled in Programming Fundamentals and Discrete Mathematics. Led the student programming club in 2021.",
+        description: "Graduated with an Associate's Degree in Computer Science.",
+        courses: ["C++", "Java", "Object Oriented", "Data Structures", "Discrete Math", "Digital Logic"],
+        gpa: "3.6",
+
         logo: smc,
     },
 ];
 
-export { services, technologies, experiences, testimonials, projects, openSource, education};
+export { services, technologies, experiences, testimonials, projects, openSource, education };
