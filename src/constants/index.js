@@ -273,7 +273,7 @@ const openSource = [
             },
         ],
         images: [openLibrary],
-        source_code_link: "https://github.com/internetarchive/openlibrary",
+        source_code_link: "https://github.com/internetarchive/openlibrary/pull/7553",
     },
     {
         name: "Open Energy Dashboard (OED)",
@@ -294,7 +294,7 @@ const openSource = [
             },
         ],
         images: [oed],
-        source_code_link: "https://github.com/OpenEnergyDashboard/OED",
+        source_code_link: "https://github.com/OpenEnergyDashboard/OED/pull/975",
     },
 ];
 const education = [
@@ -303,7 +303,7 @@ const education = [
         degree: "Bachelor's in Computer Science",
         duration: "2022 - 2025",
         description: "Currently pursuing a Bachelor's in Computer Science.",
-        courses: ["Algorithms", "Comp Archt","Database","Operating Systems","Software Engineer", "Cyber Security"],
+        courses: ["Algorithms", "Comp Archt", "Database", "Operating Systems", "Software Engineer", "Cyber Security"],
         gpa: "3.5",
         logo: csulb,
     },
